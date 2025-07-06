@@ -13,3 +13,6 @@ Currently, the following papers have been implemented:
 1.  **`Absolute Zero Reinforced Self-play Reasoning with Zero Data.py`**: Corresponds to the paper "Absolute Zero Reinforced Self-play Reasoning with Zero Data" https://arxiv.org/abs/2505.03335
 2.  **`LUFFY.py`**: Corresponds to the paper "Learning to Reason under OFF-Policy guidance"https://arxiv.org/abs/2504.14945
 3.  **`GRPO.py`**: Based on the implementation found at [https://github.com/aburkov/theLMbook](https://github.com/aburkov/theLMbook).
+4.  **`swin_transformer.py`**: A reproduction of the paper "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows".
+5.  **`vit.py`**: A reproduction of the paper "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale".
+6.  **`reinforce++.py`**: A reproduction of "REINFORCE++: An Efficient RLHF Algorithm with Robustness to Both Prompt and Reward Models". **Important Note:** I do not currently endorse this paper, as I believe it misinterprets the concept of advantage and provides insufficient justification for its batch normalization approach, with inadequate experimental support. It is recommended to await further community feedback before use.
