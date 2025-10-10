@@ -16,3 +16,5 @@ Currently, the following papers have been implemented:
 4.  **`swin_transformer.py`**: A reproduction of the paper "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows".
 5.  **`vit.py`**: A reproduction of the paper "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale".
 6.  **`reinforce++.py`**: A reproduction of "REINFORCE++: An Efficient RLHF Algorithm with Robustness to Both Prompt and Reward Models". **Important Note:** I do not currently endorse this paper, as I believe it misinterprets the concept of advantage and provides insufficient justification for its batch normalization approach, with inadequate experimental support. It is recommended to await further community feedback before use.
+7.  **`Qformer.py`**: A reproduction of the Qformer module.
+8.  **`MA-LMM.py`**: A reproduction of the paper "MA-LMM Memory-Augmented Large Multimodal Model" [https://github.com/boheumd/MA-LMM](https://arxiv.org/abs/2404.05726).
