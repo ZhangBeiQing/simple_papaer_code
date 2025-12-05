@@ -565,9 +565,13 @@ def generate_rollout_data(model, ref_model, tokenizer, batch_samples, num_genera
         logits_to_keep = completion_ids.size(1)
 
         # Compute old_log_probs from the current model, with gradients disabled.
+        # Shape: (batch_size * num_generations, logits_to_keep)
+        # 其中 batch_size * num_generations 是总序列数，logits_to_keep 是每个序列中需要计算log prob的token数量
         old_log_probs = compute_log_probabilities(model, input_ids, attention_mask, logits_to_keep)
         
         # Compute ref_log_probs from the reference model, which remains static.
+        # Shape: (batch_size * num_generations, logits_to_keep) - 与old_log_probs相同的shape
+        # 这是参考模型对相同输入序列计算的log probabilities
         ref_log_probs = compute_log_probabilities(ref_model, input_ids, attention_mask, logits_to_keep)
 
     formatted_completions = [
@@ -713,7 +717,7 @@ def train_with_grpo(model, tokenizer, train_data, num_iterations=1,
     Iterative Group Relative Policy Optimization algorithm.
     
     Args:
-        model: The initial policy model to be fine-tuned.
+        model: The initial policy model to be fine-tune                                                     d.
         tokenizer: The tokenizer used for encoding prompts and decoding completions.
         train_data (list): List of training samples with "prompt" and "answer" fields.
         num_iterations (int): Number of outer iterations (reward model updates).
